@@ -1,0 +1,77 @@
+
+<section class="more-info">
+        <div class="more-info-wrapper">
+          {% if section.settings.text != blank %}
+            <h1>THE RESOLUTION STARTER PACK</h1>
+          {% else %}
+            <h1>{{ section.settings.text }}</h1>
+          {% endif %}
+      
+          {% if section.settings.text2 != blank %}
+            <p>Go for all your fitness goals with a curated collection of new kicks breathable apparel, and more supportive styles</p>
+      
+          {% else %}
+            <p>{{ section.settings.text2 }}</p>
+          {% endif %}
+        </div>
+</section>
+
+<style>
+        .more-info{
+          background: {{ section.settings.background}};
+          color: {{ section.settings.text-color }};
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .more-info-wrapper{
+         display: flex;
+         flex-direction: column;
+         width: 500px;
+         justify-content: center;
+         align-items: center;
+       }
+    
+       .more-info-wrapper h1{
+        font-size: 50px;
+      }
+</style>    
+
+{% schema %}
+    {
+      "name": "more-info",
+      "settings": [
+        {
+          "type": "color",
+          "id": "background",
+          "label": "Background",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "text-color",
+          "label": "Text",
+          "default": "#9a712f"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "default text"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text2",
+          "default": "default text"
+        }
+      ],
+      "blocks": [],
+      "presets": [
+        {
+          "name": "more-info"
+        }
+      ]
+    }
+{% endschema %}

@@ -1,0 +1,50 @@
+<section class="all-products">
+
+    <h1>{{ collections['Apparels'].title }}</h1>
+    <div class="product-container">
+        <div class="product-wrapper">
+
+            {% for product in collections['Apparels'] %}
+               <div class="product-card">
+                <img
+                width="300"
+                height="300"
+                loading="lazy"
+                src="{{ product.featured_image | image_url }}">
+                <h3>{{ product.title | link_to: product.url }}</h3>
+               </div>
+            {% endfor %}
+
+        </div>    
+    </div>   
+</section>  
+
+<style>
+
+</style>    
+
+{% schema %}
+{
+  "name": "all-products",
+  "settings": [
+    {
+       "type": "color",
+       "id": "background",
+       "label": "Background",
+       "default": "#000000"
+    },
+    {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "#fafaf2"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+       "name": "all-products"
+    }
+  ]
+}
+{% endschema %}
