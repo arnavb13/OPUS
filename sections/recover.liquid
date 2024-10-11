@@ -1,0 +1,47 @@
+<section class="form" data-section-type="recover-section">
+    <div class="form__container">
+        {%- form 'recover_customer_password' -%}
+            {% if form.posted_successfully? %}
+                {% include 'check-your-mail' %}
+            {% else %}
+                <div class="title form__title">
+                    {{ 'customer.recover_password_page.title' | t }}
+                </div>
+                <div class="form__description">
+                    {{ 'customer.recover_password_page.text' | t }}
+                </div>
+                <label class="input{% if not form.email %} input_empty{% endif %}{% if form.errors contains 'email' %} input_error{% elsif form.errors contains 'form' %} input_error{% endif %}">
+                  <span class="input__label">
+                    {{ 'customer.common.email_field_placeholder' | t }}
+                  </span>
+                  <input
+                    type="email" <!-- changed from text to email -->
+                    name="email"
+                    class="input__field"
+                    id="login-form-email" />
+                </label>
+                {% if form.errors contains 'email' %}
+                    <div class="form__error">
+                        <span class="form_error_icon"></span>
+                        <span class="form_error_text">
+                            {{ form.errors.messages.email }}
+                        </span>
+                    </div>
+                {% elsif form.errors %}
+                    <div class="form__error">
+                        <span class="form_error_icon"></span>
+                        <span class="form_error_text">
+                            {{ form.errors.messages['form'] }}
+                        </span>
+                    </div>
+                {% endif %}
+                <button type="submit" class="button form__button">
+                    {{ 'customer.recover_password_page.button_label' | t }}
+                </button>
+                <div class="form__redirect-link">
+                    {{ 'customer.recover_password_page.redirect_text_html' | t }}
+                </div>
+            {% endif %}
+        {%- endform -%}
+    </div>
+</section>
