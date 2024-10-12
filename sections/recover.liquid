@@ -2,13 +2,13 @@
     <div class="form__container">
         {%- form 'recover_customer_password' -%}
             {% if form.posted_successfully? %}
-                {% include 'check-your-mail' %}
+                {% render 'check-your-mail' %}
             {% else %}
                 <div class="title form__title">
                     {{ 'customer.recover_password_page.title' | t }}
                 </div>
                 <div class="form__description">
-                    {{ 'customer.recover_password_page.text' | t }}
+                    {{ 'customer.recover_password_page.text' | t }}  
                 </div>
                 <label class="input{% if not form.email %} input_empty{% endif %}{% if form.errors contains 'email' %} input_error{% elsif form.errors contains 'form' %} input_error{% endif %}">
                   <span class="input__label">
