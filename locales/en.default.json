@@ -1,0 +1,245 @@
+{
+    "general": {
+      "404_page": {
+        "message": "The page you are looking for doesn’t exist or an other error occurred. Try to refresh the page or return to home.",
+        "title": "Page not found",
+        "homepage_button_label": "Go to Home Page",
+        "signature": "Illustration by Ekaterina Rogova from"
+      }
+    },
+    "cart": {
+      "common": {
+        "title": "Shopping cart",
+        "return_to_store_link": "Back to shopping",
+        "clear_cart_label": "Clear cart",
+        "cancel_button_label": "Cancel",
+        "digital_products_label": "Digital products",
+        "physical_products_label": "Physical products",
+        "remove": "Remove",
+        "digital_products_email_text": "Digital products will be sent to your email after payment"
+      },
+      "clear_item_popup": {
+        "title": "Delete item",
+        "text": "Are you sure, you want to delete this item?",
+        "action_button_label": "Delete"      
+      },
+      "clear_all_items_popup": {
+        "title": "Clear cart",
+        "text": "Are you sure you want to clear your shopping cart?",
+        "action_button_label": "Clear"      
+      },
+      "clear_unavailable_items_popup": {
+        "title": "Clear unavailable",
+        "text": "Are you sure you want to clear unavailable your shopping cart?",
+        "action_button_label": "Clear",      
+        "success_alert_text": "Unavailable items cleared"
+      },
+      "empty": {
+        "title_html":"Shopping cart is empty",
+        "text": "Your cart is empty, please add some items to continue.",
+        "button_label": "Go to Catalog"
+      },
+      "product": {
+        "in_stock_label": "In stock",
+        "out_of_stock_label": "Out of stock",
+        "limited_amount_label": "Max {{ count }} in stock",
+        "sku_label": "SKU",
+        "price_per_item_label": "per unit",
+        "weight": "Weight"
+      },
+      "total": {
+        "title": "Total",
+        "items_amount_label": {
+          "one": "{{count}} unit",
+          "other": "{{count}} units"
+        },
+        "discount_label": "Discount",
+        "taxes_label": "Taxes",
+        "taxes_at_checkout_label": "at checkout",
+        "button_label": "Checkout",
+        "details_mobile_label": "More details"
+      },
+      "unavailable_section": {
+        "title": "Unavailable"
+      },
+      "update_alert": {
+        "text": {
+          "one": "{{count}} item will be changed",
+          "other": "{{count}} items will be changed"
+        },
+        "button_label": "Ok"
+      }
+    },
+    "customer": {    
+      "common": {
+        "email_field_placeholder": "Email",
+        "password_field_placeholder": "Password",
+        "confirm_password_field_placeholder": "Confirm password",
+        "password_hint": "Password must consist of 7+ characters and contain digit, special symbol and uppercase letter",
+        "first_name_field_placeholder": "First name",
+        "last_name_field_placeholder": "Last name",
+        "phone_number_field_placeholder": "Phone number",
+        "redirect_log_in_text_button": "Sign In"
+      },
+      "sign_in_page": {
+        "title": "Sign In",      
+        "reset_password_link": "Forgot password?",
+        "button_label": "Continue",
+        "redirect_text_html": "Do not have an account? <a href=\"/account/register\" class=\"link form__link\">Sign Up</a>"
+      },
+      "recover_password_page": {
+        "title": "Password reset",
+        "check_mail_message": "We have sent you an email with information on how to reset your password. Please check the email and follow the instructions.",
+        "check_mail_title": "Check your mail",
+        "text": "Enter the email address of your account. We will send you instructions on how to reset your password.",
+        "button_label": "Reset Password",
+        "redirect_text_html": "Remember your password? <a href=\"/account/login\" class=\"link form__link\">Sign In</a>"
+      },
+      "reset_password_page": {
+        "title": "New password",
+        "text": "Please enter a new password for your account",
+        "password_changed_message": "Now you can use your new password to sign in to the store.",
+        "password_changed_title": "Password has been changed",
+        "button_label": "Confirm",
+        "redirect_text_html": "Remember your password? <a href=\"/account/login\" class=\"link form__link\">Sign In</a>"
+      },
+      "sign_up_page": {
+        "title": "Sign up",
+        "text": "Sign up to get the best offers and keep track of your orders.",            
+        "checkbox_label_html": "I agree to the <a href=\"#\" class=\"link checkbox__link\">Terms of Use</a> and <a href=\"#\" class=\"link checkbox__link\">Privacy policy</a>",
+        "button_label": "Continue",
+        "redirect_text_html": "Do you already have an account? <a href=\"/account/login\" class=\"link form__link\">Sign In</a>"
+      },
+      "personal_details": {
+        "title": "Personal details",
+        "general_section_label": "General",
+        "orders_section_label": "Orders",
+        "order_number_label": "Order number",
+        "date_label": "Date",
+        "payment_status_label": "Payment status",
+        "fulfillment_status_label": "Fulfillment status",
+        "total_label": "Total",
+        "no_orders_text": "You do not have any orders yet"
+      },
+      "personal_details_orders": {
+        "receipt_button_label": "Receipt",
+        "support_button_label": "Support",
+        "summary_section_title": "Summary",
+        "total_label": "Total",
+        "subtotal_label": "Subtotal",
+        "discount_label": "Discount",
+        "refunded_label": "Refunded",
+        "shipping_label": "Shipping cost",
+        "current_net_label": "Current net",
+        "tax_label": "Tax",
+        "order_date_label": "Creation date",
+        "details_section_title": "Details",
+        "products_section_title": "Products"
+      },
+      "personal_details_orders_details": {
+        "first_name_label": "First name",
+        "last_name_label": "Last name",
+        "phone_number_label": "Phone number",
+        "email_label": "Email",
+        "payment_info_label": "Payment info",
+        "delivery_option_label": "Delivery option",
+        "default_address_label": "Default address",
+        "shipping_address_label": "Shipping address",
+        "billing_address_label": "Billing address"
+      },
+      "profile_card": {
+        "no_firstname_account_label": "Account",      
+        "logout_button_label": "Log out",      
+        "logout_popup_title": "Log out",
+        "logout_popup_text": "Are you sure you want to log out?",
+        "logout_popup_action_button_label": "Continue",
+        "logout_popup_cancel_button_label": "Cancel"
+      },  
+      "shipping_address": {
+        "title": "Shipping address",
+        "add_address_button_label": "+ Add address",
+        "no_addresses_text": "You have not added a shipping address yet",
+        "same_as_shipping_address": "Same as shipping address",
+        "company_field_placeholder": "Company (optional)",
+        "country_field_placeholder": "Country",
+        "region_field_placeholder": "State / Province / Region",
+        "city_field_placeholder": "City",
+        "street_field_placeholder": "Street",
+        "apartment_field_placeholder": "Apartment",
+        "postal_field_placeholder": "Postal / Zip code",
+        "set_default_address_checkbox_label": "Set as default address",      
+        "cancel_button_label": "Cancel",
+        "save_button_label": "Save",
+        "undo_changes_popup_title": "Undo changes",
+        "undo_changes_popup_text": "Are you sure you want to stop editing the current address? The data will not be saved",
+        "undo_changes_popup_action_button_label": "Continue",
+        "undo_changes_popup_cancel_button_label": "Cancel",
+        "default_address_label": "Default address",
+        "delete_button_label": "Delete",
+        "delete_address_popup_title": "Delete address",
+        "delete_address_popup_text": "Are you sure you want to delete the address?",
+        "delete_address_popup_action_button_label": "Delete",
+        "delete_address_popup_cancel_button_label": "Cancel"
+      },
+      "order": {
+        "sku": "SKU",
+        "tax": "Tax"
+      }
+    },  
+    "order": {
+      "fulfillment_status": {
+        "fulfilled": "Fulfilled",
+        "unfulfilled": "Unfulfilled",
+        "in_progress": "In progress"
+      },
+      "successfull_order_page": {
+        "expand_products_button_label": "Show More"
+      },
+      "payment_status": {
+        "paid": "Paid",
+        "refunded": "Refunded",
+        "partially_refunded": "Partially refunded",
+        "pending": "Pending",
+        "canceled": "Canceled"
+      }
+    },
+    "product_page": {
+      "inventory": {
+        "out_of_stock_label": "Out of stock",
+        "in_stock_label": "In stock"
+      },
+      "other": {
+        "no_photo_label": "No images",
+        "description_label": "Description",    
+        "cart_button_label": "Add to Cart",
+        "go_to_cart": "Go to Cart"
+      }    
+    },
+    "sections": {
+      "common": {
+        "textarea_placeholder_title": "There will be text here",
+        "collection_placeholder_title": "Collection<br />name",
+        "product_placeholder_title": "Title",
+        "product_placeholder_description": "Description",
+        "product_placeholder_price": "€99.99"
+      },
+      "cookie_popup": {
+        "title": "Cookie consent",
+        "description": "Along with the necessary cookies we would like to use additional third-party cookies to understand how you interact with our site. You can find the complete list of cookies and their usage in our <a href=\"/pages/cookie-policy\" class=\"cookie-popup__link\">Cookie policy</a>.",
+        "reject": "Reject",
+        "accept": "Accept"
+      },
+      "footer": {      
+        "copyright_text": "{{ shop_name }}. All rights reserved.",
+        "platform_html": "Powered by <a href=\"#\" class=\"footer__link footer__link_underlined\">Unistore</a>",
+        "cookie_policy": "Cookie policy"
+      },
+      "header": {
+        "tablet_menu_link": "Menu",      
+        "no_firstname_account_link": "Account",
+        "sign_in_link": "Sign In",
+        "cart_link": "Cart"
+      }
+    }
+  }
+  
