@@ -8,20 +8,21 @@
       {% else %}
         <div class="cart">
           {% for item in cart.items %}
+            <div class="cart-img">
             <img
-              width="400"
-              height="400"
+              width="300"
+              height="300"
               loading="lazy"
               src="{{ item.image | image_url}}"
-            >
+            ></div>
             <h2>{{ item.title }}</h2>
             <p>{{ item.final_line_price | money }}</p>
   
             <hr>
             <input name="updates[]" value="{{item.quantity }}">
             <a href="{{ item.url_to_remove }}">remove</a>
-            <p>Total: {{ cart.total_price | money }}</p>
           {% endfor %}
+          <p class="total">Total: {{ cart.total_price | money }}</p>
           <button type="submit" name="update">update</button>
   
           <button type="submit" name="checkout">Checkout</button>
@@ -31,12 +32,74 @@
 {% endform %}
 
 <style>
+.cart-sec {
+  background-color: {{ section.settings.background }};
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  min-height: 100vh; 
+  padding: 20px; 
+}
+
+.cart {
+  width: 90%; 
+  max-width: 1200px;
+  background-color: #000000;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.cart a:hover {
+  text-decoration: underline;
+}
+
+.cart button {
+  padding: 10px;
+}
+
+/* Handle overflow for very long carts */
+{% comment %} .cart {
+  max-height: calc(100vh - 40px); /* Maximum height of the cart, minus some padding */
+   /* Enable scrolling when cart exceeds max height */
+} {% endcomment %}
+
+.empty-cart p {
+  font-size: 100px;
+  color: #f3f1da;
+}
+
+.cart h2{
+  color: #FFFFFF;
+}
+
+.cart p{
+  color: #FFFFFF;
+}
+
+.total{
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.cart-img{
+ margin-top: 20px;
+}
+</style>
+
+{% comment %} <style>
     .cart-sec {
         background-color: {{ section.settings.background }};
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 100vh; /* Set the height to the full viewport height */
+        align-items: center; 
+        height: 100vh;/* Set the height to the full viewport height */
       }
 
     .empty-cart p{
@@ -44,10 +107,32 @@
     }
 
     .cart {
+      max-height: 80vh;
+      overflow-y: hidden;
       padding: 20px;
-
+      width: 90%;
+      box-sizing: border-box; /* Include padding in height/width calculations */
+      background-color: #07060b; /* Ensure the cart has its own background */
+      border-radius: 10px; /* Optional: Rounded corners for a better look */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-</style>      
+
+    .cart a{
+      text-decoration: none;
+      color: #FFFFFF;
+      margin-left: 4px;
+      cursor: pointer;
+    }
+
+    .cart h2{
+      color: #FFFFFF;
+    }
+
+    .cart p{
+      color: #FFFFFF;
+    }
+</style>       {% endcomment %}
+
 
 {% schema %}
 {
@@ -57,13 +142,13 @@
       "type": "color",
       "id": "background",
       "label": "Background",
-      "default": "#000000"
+      "default": "#07060b"
     },
     {
       "type": "color",
       "id": "text_color",
       "label": "Text",
-      "default": "#f3f1da"
+      "default": "#FFFFFF"
     }
   ],
   "presets": [

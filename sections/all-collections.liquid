@@ -1,6 +1,8 @@
 <section class="all-collections">
     
     <p>Shop By Category</p>
+    <div class="carousel-wrapper">
+    <button class="prev" onclick="scrollCarousel(-1)">‹</button>
     <div class="collection-container">
       <div class="collection-wrapper">
 
@@ -16,6 +18,8 @@
            </div>
         {% endfor %}    
       </div>  
+    </div>
+    <button class="next" onclick="scrollCarousel(1)">›</button>
     </div>
 </section>    
 
@@ -33,14 +37,21 @@
   margin-left: 5px;
 }
 
-.collection-container{
+.carousel-wrapper {
   position: relative;
-  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+}
+
+.collection-container{
+  width: 90%;
+  overflow-x: hidden;
 }
 
 .collection-wrapper{
   display: flex;
-  transition: transform 0.3s ease
+  transition: transform 0.3s ease-in-out;
+  padding: 15px;
 }
 
 .collection-card{
@@ -60,8 +71,40 @@
 .collection-card a:hover{
   text-decoration: underline;
 }
+
+.carousel-wrapper button {
+  background-color: #9a712f;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.carousel-wrapper .prev {
+  left: 30px;
+}
+
+.carousel-wrapper .next {
+  right: 30px;
+}
 </style>
 
+<script>
+function scrollCarousel(direction) {
+  const container = document.querySelector('.collection-wrapper');
+  const scrollAmount = 300; // Adjust based on how far you want to scroll per click
+
+  container.scrollBy({
+      left: scrollAmount * direction, // Scroll in the given direction
+      behavior: 'smooth' // Smooth scrolling effect
+  });
+}
+</script>
 
 {% schema %}
 {
@@ -71,7 +114,7 @@
       "type": "color",
       "id": "background",
       "label": "Background",
-      "default": "#000000"
+      "default": "#07060b"
     },
     {
        "type": "color",

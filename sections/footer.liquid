@@ -1,0 +1,88 @@
+<footer class= "footer-main">
+    <div class="footer-sec">
+        {% if section.blocks.size == 0 %}
+        <div>
+            <p>Terms of Sale</p>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>  
+        </div>  
+        <div>
+            <p>Terms of Sale</p>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>  
+        </div>  
+        <div>
+            <p>Terms of Sale</p>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>  
+        </div>  
+        
+        {% else %}
+        <div>
+            {% for block in section.blocks %}
+              <li>
+                <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
+              </li>
+            {% endfor %}
+          </div>
+
+        {% endif %}   
+    </div>   
+</footer>  
+
+<style>
+    .footer-main {
+        background: {{ section.settings.background }};
+        color: {{ section.settings.text_color }};
+        padding: 20px;
+      }
+      .footer-sec {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+      }
+</style>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#07060b"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "#9a712f"
+      }
+  ],
+  "blocks": [
+    {
+        "name": "Links",
+        "type": "links",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "link"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "footer"
+    }
+  ]
+}
+{% endschema %}
