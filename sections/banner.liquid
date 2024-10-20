@@ -77,6 +77,27 @@
     background-size: cover;
     background-position: center;
   }
+
+  @media (max-width: 1024px) {
+    .one, .one-user, .two, .two-user, .three, .three-user {
+      width: 50%;
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .one, .one-user, .two, .two-user, .three, .three-user {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .one, .one-user, .two, .two-user, .three, .three-user {
+      width: 100%;
+      height: 250px;
+    }
+  }
 </style>
 
 {% schema %}

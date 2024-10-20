@@ -92,16 +92,42 @@
 .carousel-wrapper .next {
   right: 30px;
 }
+
+@media (max-width: 1024px) {
+  .collection-card {
+    width: 250px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-wrapper button {
+    font-size: 1.5rem; 
+  }
+
+  .collection-card {
+    width: 200px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .carousel-wrapper button {
+    display: none; 
+  }
+}
 </style>
 
 <script>
 function scrollCarousel(direction) {
   const container = document.querySelector('.collection-wrapper');
-  const scrollAmount = 300; // Adjust based on how far you want to scroll per click
-
+  const scrollAmount = 300; 
   container.scrollBy({
-      left: scrollAmount * direction, // Scroll in the given direction
-      behavior: 'smooth' // Smooth scrolling effect
+      left: scrollAmount * direction, 
+      behavior: 'smooth' 
   });
 }
 </script>
